@@ -1,11 +1,11 @@
 'use strict';
 
 const pushNotification = (posTop, posRight, title, description, type) => {
+  // 1. Створюємо головний контейнер
   const notification = document.createElement('div');
 
   notification.classList.add('notification', type);
 
-  notification.style.position = 'fixed';
   notification.style.top = `${posTop}px`;
   notification.style.right = `${posRight}px`;
 
@@ -20,7 +20,6 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   notificationDesc.textContent = description;
 
   notification.append(notificationTitle, notificationDesc);
-
   document.body.append(notification);
 
   setTimeout(() => {
