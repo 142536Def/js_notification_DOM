@@ -16,7 +16,7 @@ const pushNotification = (posTop, posRight, title, description, type) => {
 
   const notificationDesc = document.createElement('p');
 
-  notification.classList.add('desc');
+  notificationDesc.classList.add('desc');
   notificationDesc.textContent = description;
 
   notification.append(notificationTitle, notificationDesc);
